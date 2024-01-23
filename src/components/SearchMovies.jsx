@@ -1,10 +1,25 @@
+import { useState } from "react";
 
-export const SearchMovies = () => {
+export const SearchMovies = ({ setSearchMovie }) => {
+   
+    const [inputSearch, setInputSearch ] = useState('');
+    
+    const onInputChange = ({ target }) => {
+        setInputSearch(target.value);
+    }
+
+    const onSubmit = ( event ) =>{
+        event.preventDefault();
+        setSearchMovie(inputSearch);
+    }
+
     return (
-        <form>
+        <form onSubmit={ onSubmit }>
             <input 
                 type="text"
                 placeholder="Search Movie"
+                value={inputSearch}
+                onChange={ onInputChange }
             />
         </form>
     )
