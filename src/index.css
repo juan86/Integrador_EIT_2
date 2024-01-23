@@ -1,0 +1,91 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: rgb(234, 234, 234);
+  /* border: 1px;
+  border-style: dashed; */
+}
+
+body {
+  padding: 60px;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+input {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid rgb(97, 32, 158);
+  color: black;
+  font-size: 1.2rem;
+  outline: none;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 250px;
+  align-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  height: 0%;  
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  overflow: hidden;
+  transition: transform 0.9s; /* agrega transición */
+}
+
+.card:hover {
+  transform: scale(1.02); /* agranda la tarjeta al pasar el mouse */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 2.5);
+}
+
+.card p {
+  background-color: white;
+  font-size: 1.3rem;
+  margin-top: 5px;
+  padding: 5px 20px 0px 20px;
+  text-align: center;
+  min-height: 70px; /* establece una altura mínima para el título */
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.card img {
+  width: 100%;
+}
