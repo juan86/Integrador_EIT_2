@@ -9,7 +9,7 @@ export const App = () => {
         <Route path="/" element={ <Home /> }/>
         <Route path="/home" element={ <Home /> }/>
         <Route path="movie/:id" element={ <Movie /> }/>
-        <Route path="/*" element={ <Navigate to="/"/> }/>
+        <Route path="*" element={ <Navigate to="/"/> }/>
       </Routes>
     </ContextProvider>
   )

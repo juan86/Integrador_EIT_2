@@ -14,8 +14,6 @@ export const SearchMovies = () => {
     const onSubmit = ( event ) =>{
         event.preventDefault();
         dispatch({type: 'SET_MOVIE_SEARCH', payload: inputSearch});
-        console.log(inputSearch);
-        console.log(state.SearchMovies);
     }
 
     return (

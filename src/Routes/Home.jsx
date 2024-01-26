@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { SearchMovies } from "../components/SearchMovies";
 import { MoviesGrid } from "../components/MoviesGrid";
 
 export const Home = () => {
-    const [inputValue, setInputValue] = useState('');
 
     return (
             <header>

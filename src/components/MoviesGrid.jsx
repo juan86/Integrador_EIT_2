@@ -46,13 +46,8 @@ export function MoviesGrid() {
 
 
     const getMovies = async () => {
-        console.log('GetMovies');
-        console.log(state.searchMovie.length);
-
         if ( state.searchMovie.length > 0 ) return;
         
-        console.log(state.searchMovie.length);
-
         try{
             const newListMovies = await getMoviesApi(page);
             setListMovies(prevListMovies => prevListMovies.concat(newListMovies));
