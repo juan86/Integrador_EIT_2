@@ -1,7 +1,7 @@
 import { useState } from "react";
 import './SearchMovies.css';
 
-export const SearchMovies = ({ setSearchMovie }) => {
+export const SearchMovies = ({ setSearchMovie, searchMovie }) => {
    
     const [inputSearch, setInputSearch ] = useState('');
     

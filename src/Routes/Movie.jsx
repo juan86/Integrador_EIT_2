@@ -1,11 +1,11 @@
 import { useParams } from 'react-router-dom';
-import { movies } from '../utils/servicesApi';
+import { searchMovieById } from '../utils/servicesApi';
 import { GridDetailMovie } from '../components/GridDetailMovie';
 
 export const Movie = () => {
   
   const { id } = useParams();
-  const [ movie ] = movies.filter( movie => movie.id == id);
+  const [ movie ] = searchMovieById(id);
   
   return (
     <section>

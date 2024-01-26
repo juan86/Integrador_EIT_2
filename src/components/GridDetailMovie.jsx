@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './GridDetailMovie.css'
 
 export const GridDetailMovie = ( { movie } ) => {
@@ -23,22 +23,22 @@ export const GridDetailMovie = ( { movie } ) => {
 
     return (
         <>
-        <button onClick={handleBackClick}>Atras</button>
-        <div style={ imagenFondo }>
-            <div>
-                <img className='img-detail-movie' src={cardImage} alt={movie.title} />
-            </div>
-            <div>
-                <div className="title-detail-movie">
-                    <h2>{movie.title}</h2>
+            <button onClick={handleBackClick}>Atras</button>
+            <div style={ imagenFondo }>
+                <div>
+                    <img className='img-detail-movie' src={cardImage} alt={movie.title} />
                 </div>
-                <div className="text-detail-movie">
-                    <p><span>Fecha: </span>{movie.release_date}</p>
-                    <h3>Vista General</h3>
-                    <p>{movie.overview}</p>
+                <div>
+                    <div className="title-detail-movie">
+                        <h2>{movie.title}</h2>
+                    </div>
+                    <div className="text-detail-movie">
+                        <p><span>Fecha: </span>{movie.release_date}</p>
+                        <h3>Vista General</h3>
+                        <p>{movie.overview}</p>
+                    </div>
                 </div>
             </div>
-        </div>
         </>
     )
 }
