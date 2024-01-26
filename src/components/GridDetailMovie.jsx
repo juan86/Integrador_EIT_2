@@ -1,7 +1,10 @@
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ContextGlobal } from '../utils/global.context';
 import './GridDetailMovie.css'
 
 export const GridDetailMovie = ( { movie } ) => {
+    const { state, dispatch } = useContext( ContextGlobal );
     const cardImage = `https://media.themoviedb.org/t/p/w300_and_h450_bestv2${ movie.poster_path }`;
     const navigate = useNavigate();
 
@@ -18,6 +21,7 @@ export const GridDetailMovie = ( { movie } ) => {
     };
 
     const handleBackClick = () => {
+        dispatch({ type: 'SET_MOVIE_SEARCH', payload: ''});
         navigate('/');
     };
 

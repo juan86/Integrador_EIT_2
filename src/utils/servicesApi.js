@@ -1,4 +1,4 @@
-const movies = [
+export const movies = [
                     {
                         "adult": false,
                         "backdrop_path": "/f1AQhx6ZfGhPZFTVKgxG91PhEYc.jpg",
@@ -798,37 +798,3 @@ const movies = [
                         "vote_count": 7
                     }
 ];
-
-export const getMoviesApi = ( page ) =>{
-    return new Promise((resolve, reject) =>{
-        const moviesByPage = 10;
-        const start = (page - 1) * moviesByPage;
-        const end = page * moviesByPage;
-
-        const listMoviesbyPage = movies.slice(start, end);
-
-        setTimeout(() => {
-            if (listMoviesbyPage.length > 0){
-                resolve(listMoviesbyPage);
-            }else{
-                reject('No hay mas resultados');
-            } 
-        }, 500);
-    });
-}
-
-export const searchMovieByName = ( movieName ) =>{
-    console.log('Buscando desde la api a '+movieName);
-    return new Promise( ( resolve, reject ) => {
-        const movieSearch = movies.filter( movie => movie.title.toLowerCase().includes( movieName ));
-        setTimeout(() => {
-            if (movieSearch.length > 0) {
-                resolve(movieSearch);
-            } else {
-                reject([]);
-            }
-        }, 500);
-    });
-}
-
-export const searchMovieById = ( movieId ) => movies.filter( movie => movie.id == movieId);

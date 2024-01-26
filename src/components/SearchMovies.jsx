@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ContextGlobal } from '../utils/global.context';
 import './SearchMovies.css';
 
-export const SearchMovies = ({ setSearchMovie, searchMovie }) => {
+export const SearchMovies = () => {
    
     const [inputSearch, setInputSearch ] = useState('');
+    const { state, dispatch } = useContext( ContextGlobal );
     
     const onInputChange = ({ target }) => {
         setInputSearch(target.value);
@@ -11,7 +13,9 @@ export const SearchMovies = ({ setSearchMovie, searchMovie }) => {
 
     const onSubmit = ( event ) =>{
         event.preventDefault();
-        setSearchMovie(inputSearch);
+        dispatch({type: 'SET_MOVIE_SEARCH', payload: inputSearch});
+        console.log(inputSearch);
+        console.log(state.SearchMovies);
     }
 
     return (
