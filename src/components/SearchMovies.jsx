@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './SearchMovies.css';
 
 export const SearchMovies = ({ setSearchMovie }) => {
    

@@ -1,0 +1,44 @@
+.card-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 250px;
+    align-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    height: 0%;  
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+    transition: transform 0.9s; /* agrega transición */
+  }
+  
+  .card:hover {
+    transform: scale(1.02); /* agranda la tarjeta al pasar el mouse */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 2.5);
+  }
+  
+  .card p {
+    background-color: white;
+    font-size: 1.3rem;
+    margin-top: 5px;
+    padding: 5px 20px 0px 20px;
+    text-align: center;
+    min-height: 70px; /* establece una altura mínima para el título */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+  }
+  
+  .card img {
+    width: 100%;
+  }
