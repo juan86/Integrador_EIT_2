@@ -8,7 +8,8 @@ const initialSate = () =>{
     
     return {
         moviesData: JSON.parse( localStorage.getItem('movies')) || [],
-        searchMovie: ''
+        searchMovie: '',
+        previousSearch: '',
     };
 }
 
@@ -18,6 +19,8 @@ const reducer = (state, action) => {
             return { ...state, movies: action.payload }
         case 'SET_MOVIE_SEARCH':
             return { ...state, searchMovie: action.payload }
+        case 'SET_PREVIOUS_SEARCH':
+            return { ...state, previousSearch: action.payload }
         default:
             return state;
     }

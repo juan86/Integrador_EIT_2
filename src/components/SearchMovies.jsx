@@ -13,6 +13,7 @@ export const SearchMovies = () => {
 
     const onSubmit = ( event ) =>{
         event.preventDefault();
+        dispatch({type: 'SET_PREVIOUS_SEARCH', payload: state.searchMovie});
         dispatch({type: 'SET_MOVIE_SEARCH', payload: inputSearch});
     }
 
