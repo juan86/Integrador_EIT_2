@@ -1,6 +1,6 @@
-#Integrador N° 2
+# Integrador N° 2
 
-##Para realizar el Proyecto Integrador te propongo realizar los siguientes pasos, 
+## Para realizar el Proyecto Integrador te propongo realizar los siguientes pasos, 
 
 
 1 - Crear repositorio git:  
